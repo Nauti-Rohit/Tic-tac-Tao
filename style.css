@@ -1,17 +1,32 @@
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #548687;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #00fff7;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00fff7;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px #00fff7;
 }
 
 .container {
-  height: 70vh;
+  height: auto;
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -23,52 +38,81 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5vmin;
+  gap: 1vmin;
 }
 
 .box {
   height: 18vmin;
   width: 18vmin;
+  border: 2px solid #00fff7;
   border-radius: 1rem;
-  border: none;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  background-color: #1e1e2f;
+  color: #00fff7;
   font-size: 8vmin;
-  color: #b0413e;
-  background-color: #ffffc7;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00fff7;
+  transition: transform 0.2s ease;
 }
 
-#reset-btn {
-  padding: 1rem;
-  font-size: 1.25rem;
-  background-color: #191913;
-  color: #fff;
-  border-radius: 1rem;
-  border: none;
+.box:active {
+  transform: scale(0.95);
 }
 
+#reset-btn,
 #new-btn {
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
   font-size: 1.25rem;
-  background-color: #191913;
-  color: #fff;
+  background-color: rgba(0, 255, 247, 0.1);
+  border: 2px solid #00fff7;
+  color: #00fff7;
   border-radius: 1rem;
-  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #00fff7;
+  color: #1e1e2f;
+  box-shadow: 0 0 10px #00fff7;
 }
 
 #msg {
-  color: #ffffc7;
-  font-size: 5vmin;
+  font-size: 4vmin;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
 }
 
 .msg-container {
-  height: 100vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
+  z-index: 10;
 }
 
 .hide {
   display: none;
+}
+
+.background-watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.05); /* Very subtle white */
+  font-style: italic;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
 }
