@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Mode Selection -->
+    <div class="mode-selection">
+      <h2>Select Game Mode</h2>
+      <button id="play-human">Play with Friend</button>
+      <button id="play-computer">Play with Computer</button>
+    </div>
+
+    <!-- Game Over Message -->
     <div class="msg-container hide">
       <p id="msg">Winner</p>
       <button id="new-btn">New Game</button>
     </div>
-    <main>
+
+    <!-- Main Game -->
+    <main class="hide">
       <h1>Tic Tac Toe</h1>
+      <p id="turn-indicator" class="turn-msg"></p>
       <div class="container">
         <div class="game">
           <button class="box"></button>
@@ -29,6 +40,7 @@
       <button id="reset-btn">Reset Game</button>
       <div class="background-watermark">Created by Nauti-Rohit</div>
     </main>
+
     <script src="app.js"></script>
   </body>
 </html>

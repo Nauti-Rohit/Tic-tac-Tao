@@ -31,6 +31,22 @@ h1 {
   align-items: center;
 }
 
+.mode-selection {
+  text-align: center;
+  padding: 20px;
+}
+
+.mode-selection button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
 .game {
   height: 60vmin;
   width: 60vmin;
@@ -39,6 +55,12 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 1vmin;
+}
+.turn-msg {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 1.2rem;
 }
 
 .box {
